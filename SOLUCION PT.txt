@@ -1,0 +1,156 @@
+								RESPUESTAS DE LA PRUEBA TECNICA
+
+------------------------------------------ RESPUESTAS RAZONAMIENTO LOGICO ---------------------------------------------------------------------------------------
+
+EJERCICIO 1
+según la secuencia (RQP, ONM, LKJ, ___, FED) que letras sigue 
+
+a- IHG
+b- CAB
+c- JKL
+d- GHI
+
+Respuesta: A
+
+según la secuencia (KBJ, LCK, MDL, NEM, ___) que letras sigue 
+
+a- OEP
+b- OFN
+c- MEN
+d- PFQ
+
+Respuesta: B
+
+según la secuencia (104, 109, 115, 122, 130, ___) que numero sigue 
+
+a- 119
+b- 125
+c- 139
+d- 134
+
+Respuesta: C
+
+
+según la secuencia (15, 31, 63, 127, 255, ___) que numero sigue 
+
+a- 110
+b- 170
+c- 511
+d- 181
+
+Respuesta: C
+
+EJERCICIO 2
+Dado un grupo de 5 personas: A, B, C, D, E. Se tiene:
+
+1- Una de ellas esa artista, otra es médico, otra es periodista, otra es deportista y otra es juez.
+2- Tres de ellas A, C y el juez, prefieren beber té, B y el periodista prefieren beber café.
+3- El deportista, D y A, son amigos entre sí, pero dos de ellos prefieren el café.  
+4- El artista es hermano de C.
+
+Sabiendo esto responde:
+
+1. ¿Quién es el Artista?
+
+Respuesta: A
+
+2. ¿Quién es el Deportista?
+
+Respuesta: B
+
+3. ¿Quién es el Medico?
+
+Respuesta: C
+
+4. ¿cuál de los siguientes grupos incluye a una persona que prefiere el té pero que no es el juez?
+
+a - A-C-E
+b - D-E
+c - B-C-E
+d - B-E
+e - Ninguno de los anteriores
+
+Respuesta: C
+
+
+------------------------------------------ PSEUDOCÓDIGO DE LA PRUEBA ---------------------------------------------------------------------------------------
+
+
+# Sección de importación de bibliotecas/frameworks (si es necesario)
+# Definicion de una clase
+Estructura Elemento:
+    peso
+    calorias
+
+# Función para encontrar los elementos óptimos
+Encontrar_elementos_óptimos(lista_elementos, Mínimo_calorías, Peso_máximo):
+    resultados = []
+    mejor_conjunto = []
+    mejor_calorias = 0
+    mejor_peso = 0
+
+    # Ciclo para iterar sobre todas las combinaciones de elementos
+    para (i = 0; i < combinaciones de elementos; i++):
+        total_calorias = 0
+        total_peso = 0
+
+        # Ciclo para calcular el total de calorías y peso de cada combinación
+        para (j = 0; j < combinación; j++):
+            total_calorias += combinación[j].calorias
+            total_peso += combinación[j].peso
+
+        	# Si la combinación cumple con los requisitos, se evalúa si es la mejor opción hasta el momento
+        	si (total_calorias >= Mínimo_calorías) y (total_peso <= Peso_máximo):
+            		si (total_calorias > mejor_calorias) o ((total_calorias == mejor_calorias) y (total_peso < mejor_peso)):
+                		mejor_conjunto = combinación
+                		mejor_calorias = total_calorias
+                		mejor_peso = total_peso
+	    		fin si
+        	fin si
+	fin para
+    fin para
+
+    resultados.agregar(mejor_conjunto)
+    retornar resultados
+fin func
+
+# Función para mostrar los resultados
+Mostrar_resultados(resultados):
+    # Ciclo para iterar sobre cada conjunto de resultados
+    para (i = 0; i < resultados; i++):
+        Imprimir("Conjunto óptimo:")
+        # Ciclo para mostrar cada elemento del conjunto óptimo
+        para (j = 0; j < conjunto; j++):
+        	Imprimir("Elemento - Peso: " + conjunto[j].peso + ", Calorías: " + conjunto[j].calorias)
+        	Imprimir("Total de calorías: " + mejor_calorias)
+        	Imprimir("Total de peso: " + mejor_peso)
+    	fin para
+    fin para
+fin func
+
+# Ejemplo de uso
+elementos = [(5, 3), (3, 5), (5, 2), (1, 8), (2, 3)] # (Peso, Calorías)
+Mínimo_calorías = 15
+Peso_máximo = 10
+
+resultados = Encontrar_elementos_óptimos(elementos, Mínimo_calorías, Peso_máximo)
+Mostrar_resultados(resultados)
+
+
+------------------------------------------ REQUERIMIENTOS OPCIONALES ---------------------------------------------------------------------------------------
+
+
+Requerimiento 1: La aplicación debería funcionar en al menos tres sistemas operativos OSX, Linux, Windows (no necesariamente desplegable en todos):
+Para cumplir con este requisito, me aseguro que la aplicación sea independiente del sistema operativo, lo cual es común en aplicaciones web como esta. Dado que estamos trabajando con HTML y JavaScript, el código se ejecutará en cualquier navegador web moderno en cualquier sistema operativo, incluidos OSX, Linux y Windows.
+
+Requerimiento 2: La aplicación debe ser interoperable:
+La interoperabilidad se refiere a la capacidad de la aplicación para funcionar y comunicarse con otras aplicaciones o sistemas. En este caso, la aplicación se basa en tecnologías web estándar como HTML, JavaScript y CSS, lo que garantiza su interoperabilidad con una amplia gama de plataformas y sistemas.
+
+Requerimiento 3: La aplicación debe ser de fácil mantenimiento:
+Para facilitar el mantenimiento, se pueden seguir algunas prácticas recomendadas, como mantener un código limpio y bien estructurado, utilizar nombres de variables y funciones descriptivos, y documentar el código. En el código proporcionado, se han seguido estas prácticas en la medida de lo posible para la lógica en JavaScript, lo que facilitará su mantenimiento a largo plazo.
+
+Requerimiento 4: El uso de control de versión para la solución, por ejemplo, GitHub:
+Para cumplir con este requisito, simplemente se subió el código a GitHub y se comparte el enlace para que se pueda descargar y utilizar.
+
+Requerimiento 6: Documentar la escalabilidad de la solución:
+Se agregó un comentario que documenta que la solución utiliza un algoritmo de fuerza bruta para encontrar el conjunto óptimo de elementos. Se señala que este enfoque puede ser eficiente para un pequeño número de elementos, pero puede ser menos escalable para conjuntos grandes. Esto cumple con el requisito de documentar la escalabilidad de la solución.
